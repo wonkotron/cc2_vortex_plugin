@@ -16,7 +16,7 @@ function main(context) {
         mergeMods: true,
         queryPath: findGame,
         supportedTools: [],
-        queryModPath: () => 'rom_0/',
+        queryModPath: () => 'rom_0',
         logo: 'gameart.jpg',
         executable: () => 'carrier_command.exe',
         requiredFiles: [
@@ -39,7 +39,7 @@ function findGame() {
 }
 
 function prepareForModding(discovery) {
-    return fs.ensureDirAsync(path.join(discovery.path, 'rom_0', '~mods'));
+    return fs.ensureDirAsync(path.join(discovery.path, 'rom_0'));
 }
 
 module.exports = {
